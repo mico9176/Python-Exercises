@@ -11,6 +11,14 @@ Expected Output:
 >> 5
 >> 10
 >> 15
+
+Notes on Constraints:
+1. The input must be a positive integer (i.e. 1, 2, 3, 4, 5, ...); if the number
+has only trailing zeroes on the end (e.g. 1.000, 1.0, 2.0, etc.), the program
+will accept it.
+
+2. If any these of these constraints are not followed, then an error will be
+raised.
 '''
 
 try:

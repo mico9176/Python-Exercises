@@ -9,6 +9,15 @@ Expected Output:
 >> Enter a list: ['Ellie', 'Steve', 'Sam', 'Owen', 'Gavin']
 >> Ellie
 >> Gavin
+
+Notes on Constraints:
+1. The input must be a list; it must have square brackets at the beginning and
+at the end and the names that are in the list should be separated by commas and
+must have an apostrophe at the beginning and at the end; they must also begin
+with CAPITAL Letters.
+
+2. If any these of these constraints are not followed, then an error will be
+raised.
 '''
 try:
     list_input = input("Enter a list: ")
@@ -22,7 +31,7 @@ try:
         list = list_input.split(',')
 
         for name in list:
-            if name[0] != "'" and name[-1] != "'":
+            if name[0] != "'" or name[-1] != "'":
                 raise SyntaxError
 
         for name in list:
@@ -37,4 +46,4 @@ except ValueError:
 	print("Error: The value you entered is not a list")
 
 except SyntaxError:
-    print("One of the items in the list does not start with an apostrophe")
+    print("Error: One of the items in the list does not start/end with an apostrophe")
